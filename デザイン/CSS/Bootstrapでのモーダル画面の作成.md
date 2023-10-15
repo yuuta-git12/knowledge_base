@@ -9,3 +9,6 @@
 - [bootstrap ドキュメント](https://getbootstrap.jp/docs/4.3/components/modal/)
 - [モーダル画面が機能しなかった際の助けになった](https://teratail.com/questions/324145?link=qa_related_pc)
 - [とほほのBootstrap 4入門](https://www.tohoho-web.com/bootstrap/modal.html)
+- [ポップオーバー](https://getbootstrap.jp/docs/5.3/components/popovers/)
+- [ポップオーバーの使い方](https://webst8.com/blog/bootstrap4-popover/)
+- -[Bootstrapでレスポンシブな吹き出しを作成](https://cpx.business/articles/make-responsive-speech-bubbles-with-bootstrap/)
