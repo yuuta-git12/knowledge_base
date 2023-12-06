@@ -21,8 +21,7 @@
     z-index: 999;
 	position: absolute;　//追加内容
     }
-```
-
+    ```
 
 ## 参考
 1. [iPhoneでWebサイトを見る時にHTML、CSS、Jqueryで起こるバグまとめ](https://sbwinc.co.jp/post-231/)
