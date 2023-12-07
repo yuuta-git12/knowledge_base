@@ -30,8 +30,33 @@ flowchart LR
 - ボデイは解析すれば確認できるのでセキュリティ的に安全というわけではない
 
 ##　HTTPレスポンス
-
+- サーバーからの応答結果
+- 以下の内容で構成されている
+1. ステータス行  
+   1. HTTPのバージョン
+   2. ステータスコード（番号によって応答内容が異なる）
+2. ヘッダー
+   1. Server：Webサーバーの名前とバージョンなど
+   2. Conten-type：出力するMINEタイプ
+3. 空白行：ヘッダーとボディを分けている
+4. ボディ：HTMLや画像が含まれている。
+### HTTPレスポンスの主なステータス番号
+|ステータスコード|説明|
+|:---:|---|
+|200|OK<br>リクエストが成功しレスポンスが返される。正常処理を表す。|
+|301|Moved Parmanently<br>指定したリソースは移動したので、新しい場所から取得して下さい<br>サイトの引越しをしたときは、この値を設定します。|
+|302|Moved Temporarily<br>指定したリソースは一時的に移動したので、新しい場所から取得して下さい。<br>一時的にサイトの場所を変える時にこの値を設定します。|
+|304|Not Modified<br>指定したファイルは変更されていないのでブラウザのキャッシュのデータ<br>を表示してください。|
+|401|Unauthorixed<br>認証に失敗しました。|
+|403|Forbidden<br>アクセス権がありません。|
+|404|Not Found<br>リクエストしたアドレスのページがありません。|
+|500|Internal Server Error<br>スクリプトなどで内部のエラーが発生しています|
+|502|Bad Gateway<br>ゲートウェイが無効なレスポンスを受け取りました。|
+|503|Service Unavailable<br>サービスが提供できません。<br>Webサーバーに負荷がかかりすぎたときなどに表示されます。|
+|504|Gateway Timeout<br>上流からのレスポンスが時間内に得られないときに表示されます。|
 
 ## 参考サイト
 1. [「HTTPリクエスト」と「HTTPレスポンス」](https://itsakura.com/network-http-get-post)
 2. [chromeでのHTTPリクエストの確認方法](https://with.sunabaco.com/759)
+3. [MDN Web Docs](https://developer.mozilla.org/ja/)
+   1. Referencesから[HTML],[CSS],[JavaScripts],[HTTP],[Web APIs]のドキュメントを閲覧できる。HTTPのステータスコードもここで確認できる。
