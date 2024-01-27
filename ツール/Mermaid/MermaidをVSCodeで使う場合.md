@@ -6,6 +6,10 @@
 - VScodeでMermaidを書く場合は拡張子.mdのファイル内に「```mermaid」から初めて書くことでMermaid記法が認識される
 - 例
 ```mermaid
+---
+title: "[Title]"
+---
+
 flowchart TB
     A --> B[test]
     B --> C
