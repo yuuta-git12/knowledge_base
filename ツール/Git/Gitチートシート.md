@@ -37,3 +37,5 @@
 |```git reset --soft HEAD^```|直前のコミットを取り消す。<br>https://qiita.com/shuntaro_tamura/items/06281261d893acf049ed|
 |---|---|
   
+## ローカルリポジトリをリモートリポジトリに送る方法
+- [githubでpushするまでの手順](https://qiita.com/masato5579/items/8a08ea9988f4fd0097e3)
