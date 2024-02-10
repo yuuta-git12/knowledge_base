@@ -83,10 +83,10 @@ SELECT avg(列名) FROM テーブル名
 ### 切り分けたグループに条件を付加する
 - `HAVING`：グループ毎に集約した値を条件にして選択したい場合に使用
   - `SELECT ~ FROM ~ GROUP BY ~ HAVING グループの値に関する条件 ;`
-  - 例:
+  - 例:テーブル`city`で`CountyrCode`が`JPN`の`District`のグループ(Districtの値が同じレコード)とその数を取得し</br>そのうち数が4のレコードだけを取得する。
   ```SQL
-  SELECT District , count(*) FROM city WHERE CountryCode = 'JPN' GROUP BY District 
-  HAVING COUNT(*) = 4 ;
+  SELECT District , count(*) FROM city WHERE CountryCode = 'JPN' 
+  GROUP BY District HAVING COUNT(*) = 4 ;
   ```
 - `GROUP BY`と`ORDER BY`を組みわせることもできる
   - 例:
