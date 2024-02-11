@@ -26,7 +26,7 @@
 ```SQL
 SELECT 選択したい列のリスト FROM １つ目のテーブル名 INNER JOIN 2つ目のテーブル名 ON 結合条件;
 ```
-- 例
+- 例１:
   ```SQL
   SELECT countrylanguage.*,country.Name from countrylanguage inner join country on 
   countrylanguage.CountryCode = country.Code WHERE LANGUAGE = 'Japanese';
@@ -35,6 +35,22 @@ SELECT 選択したい列のリスト FROM １つ目のテーブル名 INNER JOI
   - 結合条件：`countrylanguage`の`CountryCode`と`country`の`Code`が等しいレコードを取得する
   - 取得する列は`countrylanguage`のすべての列と`country`の`Name`カラム
   - 最後、取得したレコードから`WHERE`で`language`が`Japnanese`のレコードだけを抜き出す。
+- 例２：
+  - キー（列）の値、ここでは「スタッフ.性別 = 性別マスタ.ID」が一致するレコードのみ取得される。
+  ```SQL
+  SELECT
+    スタッフ."ID" AS スタッフID,
+    スタッフ.姓,
+    スタッフ.名,
+    スタッフ.性別 AS 性別ID,
+    性別マスタ.名称 AS 性別名称
+  FROM
+    スタッフ INNER JOIN 性別マスタ
+  ON
+    スタッフ.性別 = 性別マスタ."ID";
+  ```
+  ![INNER JOIN参考画像](/src/image/inner_join.png)
+
 
 ### 外部結合(OUTER JOIN)
 - １つ目のテーブルを基準として、結合条件に不一致のレコードも結合する。
@@ -44,3 +60,18 @@ SELECT 選択したい列のリスト FROM １つ目のテーブル名 INNER JOI
 SELECT 選択したい列のリスト FROM １つ目のテーブル名 LEFT JOIN 2つ目のテーブル名 ON 結合条件;
 SELECT 選択したい列のリスト FROM １つ目のテーブル名 RIGHT JOIN 2つ目のテーブル名 ON 結合条件;
 ```
+- 例：
+  - INNER JOINとは異なり、JOIN句の左側テーブル（JOINの前に記述するテーブル)、ここでは「スタッフ」テーブルのレコードは全て取得される。スタッフテーブルのレコードは、性別列の値が性別マスタテーブルに存在しても、しなくても、取得される。
+  ```SQL
+  SELECT
+    スタッフ."ID" AS スタッフID,
+    スタッフ.姓,
+    スタッフ.名,
+    スタッフ.性別 AS 性別ID,
+    性別マスタ.名称 AS 性別名称
+  FROM
+    スタッフ LEFT JOIN 性別マスタ
+  ON
+    スタッフ.性別 = 性別マスタ."ID";
+  ```
+  ![LEFT JOIN参考画像](/src/image/left_join.png)
