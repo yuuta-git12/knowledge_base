@@ -10,7 +10,7 @@
 # 開発環境について
 - ASP.NETはWindows,Macどちらでも開発できるらしい。
 - Windowsの場合は、Visula Studioをインストールするだけで、簡単に開発環境を作れるらしい
-- ~~Mac用の[Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/)もあるが、2024年8月31日でサポート終了するらしい。~~
+- Mac用の[Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/)もあるが、2024年8月31日でサポート終了するらしい。
   - ~~代替方法に関する情報が少ないので、ひとまずこちらを利用する。~~
 - Visual Studio Codeによる代替方法があるので、そちらを利用する。
   - 拡張機能「C# Debkit」の追加
