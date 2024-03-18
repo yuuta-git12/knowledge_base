@@ -92,7 +92,7 @@ xdebug.client_host = "host.docker.internal"
 
 [[PHP] Xdebug のリモートデバッグ、理解していますか？ - Qiita](https://qiita.com/castaneai/items/d5fdf577a348012ed8af)
 
-C:\work\digitaldenen_aster2\.vscode\launch.json
+C:\work\hogehoge\.vscode\launch.json
 
 - エラー
     - Docker Desktopでphp -vすると以下の表示がでる。
@@ -145,12 +145,11 @@ lanch.jsonの中身を以下のように修正
             "request": "launch",
             "port": 9003,
 			"pathMappings": {
-                "/work/aster2": "${workspaceRoot}"
+                "/work/hogehoge": "${workspaceRoot}"
             }
 
         },
 ```
 
-**work/aster2はdocker desktopのworkディレクトリから参照**
+**work/hogehogeはdocker desktopのworkディレクトリから参照**
 
-AAAの場合は「work/aster_admin_asp」とする。
